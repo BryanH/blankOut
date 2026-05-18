@@ -12,11 +12,12 @@ const observer = new MutationObserver((mutations) => {
     for (const mutation of mutations) {
         for (const node of mutation.addedNodes) {
             if (node.nodeType === Node.ELEMENT_NODE) {
+                /* beautify ignore:start */
                 if (node.matches?.('a[target="_blank"]')) {
                     node.removeAttribute("target");
                 }
+                /* beautify ignore:end */
                 removeBlankTargets(node);
-                //var keys = Object.keys(node);
                 console.log("Removed blank target from ["+node+"] [" + Object.keys(node) + "]");
             }
         }
