@@ -4,9 +4,9 @@
   "description": "Prevent links from opening in a new window or tab",
   "version": "0.0.1",
   "icons": {
-    "48": "icons/icon.svg",
-    "64": "icons/icon.svg",
-    "96": "icons/icon.svg"
+    "48": "icons/logo.svg",
+    "64": "icons/logo.svg",
+    "96": "icons/logo.svg"
   },
   "content_scripts": [
     {
@@ -18,7 +18,7 @@
   ],
   "browser_specific_settings": {
     "gecko": {
-      "id": "eed2babd-2d29-4112-882e-0c7b41f5b61d",
+      "id": "{eed2babd-2d29-4112-882e-0c7b41f5b61d}",
       "data_collection_permissions": {
         "required": [ "none" ]
       }
