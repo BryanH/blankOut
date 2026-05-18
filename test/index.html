@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="Your Mom 🍔">
+    <meta name="geo.position" content="29;-95">
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="Houston">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel= 
+    "stylesheet" integrity=
+    "sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin=
+    "anonymous">
+    <title>
+      Blankout: Test file
+    </title>
+    <style type="text/css">
+    div.c1 {width:300px;border:3px red outset}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="px-5 mb-4 bg-body-tertiary rounded-3">
+        <div class="container-fluid pb-5">
+          <div class="col-md-8 offset-md-2">
+            <h1 class="display-5 py-5">
+              Blank Out
+            </h1>
+            <div class="row fs-4">
+              <div class="col-12 fs-4 py-2">
+                Prevent links with the blank attribute from opening in new windows<sup>†</sup> when
+                clicked.
+              </div>
+              <div class="col-12 py-2">
+                <em>Why?</em> Because when a link opens in a new window<sup>†</sup>, the user
+                cannot use the back button to go back to the previous screen.
+              </div>
+              <div class="col-12 py-2">
+                Some uninformed designers believed 'disabling' the back button and leaving a window
+                open from the site made it <em>sticky</em>, so visitors would be more likely to
+                stay on the site. While this might've worked for click-bait junk sites, it is
+                annoying to regular users when the browser's back-button doesn't work as expected,
+                and they suddenly have many unexpected windows open.
+              </div>
+            </div>
+            <div class="row">
+              <div class="col fs-5">
+                <small><sup>†</sup>Note also, this includes new tabs if the browser is configured
+                to do so.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2>
+        Link Tests
+      </h2>
+      <p class="fst-italic">
+        With the plugin enabled, these links should open in the same tab/window.
+      </p>
+      <div class="row text-center">
+        <div class="col-6 border border-success rounded pb-2">
+          <div class="row">
+            <h2 class="text-success">
+              Passing
+            </h2>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="p-5 bg-body-tertiary border rounded-3">
+                <p>
+                  <a href="https://google.com" class="btn-lg btn btn-success">Google</a>
+                </p>
+                <p class="fs-6 fw-lighter">
+                  (no target)
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="p-5 bg-info-subtle border rounded-3">
+                <p>
+                  <a href="https://fark.com" target="_blank" class="btn-lg btn
+                  btn-success">Fark</a>
+                </p>
+                <p class="fs-6 fw-lighter">
+                  _blank
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 border border-danger rounded pb-1">
+          <div class="row">
+            <h2 class="text-danger">
+              Failing
+            </h2>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="p-5 bg-success-subtle border rounded-3">
+                <p>
+                  <a id="linko" href="#" target="_top" class="btn-lg btn btn-danger">Boing
+                  Boing</a>
+                </p>
+                <p class="fs-6 fw-lighter">
+                  added by javascript
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="p-5 bg-warning-subtle border rounded-3">
+                <p>
+                  <a onclick="window.open('https://alwaysjudgeabookbyitscover.com/','_blank')"
+                  class="btn-lg btn btn-danger">Book's Cover</a>
+                </p>
+                <p class="fs-6 fw-lighter">
+                  onclick executes _blank
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script> 
+      <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity= 
+      "sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script> 
+      <script type="text/javascript">
+
+
+
+
+
+
+
+      $(function() {
+        $("#linko").prop("href", "https://boingboing.net").prop("target", "_blank");
+      });
+      </script>
+    </div>
+  </body>
+</html>
