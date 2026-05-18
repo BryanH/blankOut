@@ -1,8 +1,10 @@
 function removeBlankTargets(root = document) {
+    /* beautify ignore:start */
     root.querySelectorAll?.('a[target="_blank"]')
         .forEach((anchor) => {
             anchor.removeAttribute("target");
         });
+    /* beautify ignore:end */
 }
 
 removeBlankTargets();
