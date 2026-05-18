@@ -18,7 +18,7 @@ const observer = new MutationObserver((mutations) => {
                 }
                 /* beautify ignore:end */
                 removeBlankTargets(node);
-                console.log("Removed blank target from ["+node+"] [" + Object.keys(node) + "]");
+                console.log("Removed blank target from [" + node + "] [" + Object.keys(node) + "]");
             }
         }
     }
